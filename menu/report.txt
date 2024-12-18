@@ -1,0 +1,37 @@
+##Describe your thought process while developing and testing the code for the tasks.
+
+
+
+
+
+##Do you find the UML class diagrams helpful when solving the tasks?
+
+
+##Elaborate on some of the difficulties learning Java as a new language and writing the first program in Java.
+Java is quite a jump from Python when it comes to boiler-plate and
+syntax. So much of the language feels reduntant, weirdly named,
+excessive and quite a hassle to get through. While a lot of things
+do get carried over from learning Python or a different language,
+Java is a bit trickier to compile and run. Also it very evident how
+much more resources Java's runtime requires for linting, LSP and 
+error handling.
+
+
+##Describe the code you wrote and talk about how you structured the code.
+I started making the RockPaperScissors class, first trying to piece
+together the play() method with placeholder message, seeing if it runs.
+Then after verifying if it works, i went with creating some of the
+variables needed for the logic to work. Setting up a way for the user
+to enter their choice, and then working on the game logic. Comparing
+the user and computer choices against one another and doing the game
+as intended. Whoever wins the round gets 1 added to their scores.
+And then it was about putting the game in a loop. Lastly i worked
+on the computer's decisions, giving a way to randomly select 1 out of
+3 options, getting that number, and matching it with rock, paper, or
+scissors.
+
+
+##Create a UML class diagram to show how you implemented the class(es) and include it in the report.
+
+
+##What is your TIL?
