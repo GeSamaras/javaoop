@@ -31,6 +31,7 @@ public class Menu {
     public void run() {
         printMenu();
         String choice;
+        // starts choice prompt with the scanner inside
         while (!(choice = scanner.nextLine().trim()).equalsIgnoreCase("q")) {
             switch (choice) {
                 case "1" -> {

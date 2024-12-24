@@ -1,9 +1,9 @@
 /**
  * Show how a path can be constructed to point out a file resources.
  */
-import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -40,5 +40,7 @@ public class ReadBufferedMain {
         }
         System.out.println("---\nWrote a backup file as: " + path1);
     }
+
+  
 }
 
