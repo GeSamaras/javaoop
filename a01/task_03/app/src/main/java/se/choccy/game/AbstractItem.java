@@ -1,5 +1,6 @@
 package se.choccy.game;
 
+
 public abstract class AbstractItem implements Item {
     protected Position position;
     protected String description;

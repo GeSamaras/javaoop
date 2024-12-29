@@ -1,12 +1,23 @@
 package se.choccy.game;
 
-public abstract class AbstractMoveableItem extends AbstractItem implements Moveable {
-    public AbstractMoveableItem(Position position) {
-        super(position);
+public abstract class AbstractMoveableItem extends AbstractItem  {
+    protected Position position;    
+
+    public AbstractMoveableItem(Position position, String description, String graphic) {
+        super(position, description, graphic);
+        this.position = position;
     }
 
-    @Override
+    public Position getPosition() {
+        return position;
+    }
+
+    public String toString() {
+        return "";
+    }
+
+    /* 
     public void move(Position newPosition) {
         this.position = newPosition;
-    }
+    } */
 }

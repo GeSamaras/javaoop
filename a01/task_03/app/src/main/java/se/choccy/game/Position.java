@@ -9,6 +9,11 @@ public class Position {
         this.y = y;
     }
 
+    public Position(Position position) {
+        this.x = position.getX();
+        this.y = position.getY();
+    }
+
     public int getX() {
         return x;
     }
@@ -16,6 +21,15 @@ public class Position {
     public int getY() {
         return y;
     }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -33,5 +47,10 @@ public class Position {
     @Override
     public String toString() {
         return "(" + x + ", " + y + ")";
+    }
+
+    public void move(Position relative) {
+        this.x += relative.getX();
+        this.y += relative.getY();
     }
 }
