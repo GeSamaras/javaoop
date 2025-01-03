@@ -1,18 +1,19 @@
 package se.choccy.game;
 
 public class FirTree extends AbstractItem {
-    private Position position;
+    private final Position treePosition;
 
     public FirTree(Position position) {
         super(position, "FirTree", "🌲");
-        this.position = position;
+        this.treePosition = position;
     }
 
     @Override
     public Position getPosition() {
-        return position;
+        return treePosition;
     }
 
+    @Override
     public String toString() {
         return "FirTree🎄";
     }

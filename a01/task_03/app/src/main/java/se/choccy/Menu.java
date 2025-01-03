@@ -6,6 +6,7 @@ import se.choccy.game.Forest;
 
 public class Menu {
     private final Scanner scanner = new Scanner(System.in, "UTF-8");
+    @SuppressWarnings("rawtypes")
     Forest forest = new Forest<>();
 
 

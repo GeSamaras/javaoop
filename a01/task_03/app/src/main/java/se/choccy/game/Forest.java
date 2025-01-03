@@ -6,7 +6,6 @@ public class Forest<Item, AbstractMoveableItem> {
     private final int WIDTH = 10;
     private final int HEIGHT = 10;
 
-    
 
     private Map<Position, Item> items;
     private AbstractMoveableItem player, hunter, home;
@@ -47,7 +46,13 @@ public class Forest<Item, AbstractMoveableItem> {
         StringBuilder gamePlan = new StringBuilder();
         for (int x = 0; x < WIDTH; x++) {
             for (int y = 0; y < HEIGHT; y++) {
-                gamePlan.append("🌲");
+                Position pos = new Position(x, y);
+                Item item = items.get(pos);
+                if (item != null){
+                    // gamePlan.append(item.getGraphic);  
+                } else {
+                    gamePlan.append("🟩");
+                }
             }
             gamePlan.append("\n");
         }
