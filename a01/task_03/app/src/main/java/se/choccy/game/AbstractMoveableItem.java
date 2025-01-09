@@ -16,8 +16,8 @@ public abstract class AbstractMoveableItem extends AbstractItem  {
         return "";
     }
 
-    /* 
+    
     public void move(Position newPosition) {
         this.position = newPosition;
-    } */
+    }
 }
