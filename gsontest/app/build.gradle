@@ -16,13 +16,12 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    implementation 'com.google.code.gson:gson:2.10.1'
-
-
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
 
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation 'com.google.code.gson:gson:2.11.0'
+    
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // This dependency is used by the application.
@@ -38,14 +37,10 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'se.choccy.Main'
+    mainClass = 'org.example.App'
 }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
-}
-
-tasks.named('run') {
-    standardInput = System.in
 }

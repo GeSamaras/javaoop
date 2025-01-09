@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Forest {
+public class Forest  {
     private final int WIDTH = 10;
     private final int HEIGHT = 10;
     private Map<Position, Item> items = new HashMap<>();
@@ -98,9 +98,9 @@ public class Forest {
     // checks if current position already has "player"
     // if not, then call .put and add it to the position 
     public void addPlayerItem(AbstractMoveableItem player) {
-        if (this.player == null && !items.containsKey(player.getPosition())) {
+        if (this.player == null) {
             this.player = player;
-            //items.put(player.getPosition(), player);
+            items.put(player.getPosition(), player);
         } else {
             System.out.println("Player cannot be put");
         }
@@ -119,6 +119,8 @@ public class Forest {
         if (home == null) {
             this.home = home;
             items.put(home.getPosition(), home);
+        } else {
+            System.out.println("Home already in map");
         }
     }
 

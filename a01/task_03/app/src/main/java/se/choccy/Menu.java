@@ -31,6 +31,10 @@ public class Menu {
             | 5) Add 5 trees and 5 stones to the forest
             | 6) Add player, hunter and the home
             | 7) Play game
+            | 8) Save game to file
+            | 9) Load game from file
+            | p) Print game as JSON
+            | s) save game as JSON 
             | m) Print menu
             | qQ) Quit
             -----------------""");
