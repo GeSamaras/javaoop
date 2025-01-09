@@ -1,6 +1,8 @@
 package se.choccy.game;
 
-public class Robot extends AbstractMoveableItem {
+import java.io.Serializable;
+
+public class Robot extends AbstractMoveableItem implements Serializable {
     public Robot(Position position) {
         super(position, "Robot", "🤖");
     }

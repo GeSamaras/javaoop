@@ -1,7 +1,9 @@
 package se.choccy.game;
 
+import java.io.Serializable;
 
-public abstract class AbstractItem implements Item {
+
+public abstract class AbstractItem implements Item, Serializable {
     protected Position position;
     protected String description;
     protected String graphic;

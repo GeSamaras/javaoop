@@ -179,6 +179,8 @@ public class Menu {
         } while (!choice.equals("q") && !forest.isGameOver());
     }
 
+
+    // literally every single object had to be Serializable for this to work
     private void saveGame() {
         ForestToFile.save(forest, "forest.ser");
     }

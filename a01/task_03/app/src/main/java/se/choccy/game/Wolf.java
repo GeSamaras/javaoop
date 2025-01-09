@@ -1,6 +1,8 @@
 package se.choccy.game;
 
-public class Wolf extends AbstractMoveableItem {
+import java.io.Serializable;
+
+public class Wolf extends AbstractMoveableItem implements Serializable {
     public Wolf(Position position) {
         super(position, "Wolf", "🐺");
     }

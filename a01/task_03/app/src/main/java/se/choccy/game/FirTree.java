@@ -1,6 +1,8 @@
 package se.choccy.game;
 
-public class FirTree extends AbstractItem {
+import java.io.Serializable;
+
+public class FirTree extends AbstractItem implements Serializable{
     private final Position treePosition;
 
     public FirTree(Position position) {

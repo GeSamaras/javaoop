@@ -1,6 +1,8 @@
 package se.choccy.game;
 
-public class Rock extends AbstractItem {
+import java.io.Serializable;
+
+public class Rock extends AbstractItem implements Serializable {
     public Rock(Position position) {
         super(position, "Rock", "🪨");
     }

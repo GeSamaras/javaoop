@@ -1,6 +1,8 @@
 package se.choccy.game;
 
-public class Castle extends AbstractMoveableItem {
+import java.io.Serializable;
+
+public class Castle extends AbstractMoveableItem implements Serializable {
     public Castle(Position position) {
         super(position, "Castle", "🏰");
     }

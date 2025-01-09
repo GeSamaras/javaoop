@@ -1,6 +1,8 @@
 package se.choccy.game;
 
-public abstract class AbstractMoveableItem extends AbstractItem  {
+import java.io.Serializable;
+
+public abstract class AbstractMoveableItem extends AbstractItem implements Serializable {
     protected Position position;    
 
     public AbstractMoveableItem(Position position, String description, String graphic) {

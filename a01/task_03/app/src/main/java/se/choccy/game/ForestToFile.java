@@ -18,8 +18,9 @@ public class ForestToFile {
 
     public static Forest load(String fileName) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
+            Forest forest = (Forest) ois.readObject();
             System.out.println("Loaded serialized forest from file '" + fileName + "'.");
-            return (Forest) ois.readObject();
+            return forest;
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
             return null;
