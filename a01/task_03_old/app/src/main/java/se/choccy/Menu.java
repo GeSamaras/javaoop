@@ -119,7 +119,7 @@ public class Menu {
                     System.out.println("Byee!");
                     break;
                 }
-                case "m" -> printMenu();
+                case "0" -> printMenu();
                 default -> System.out.println("Invalid choice. Try again.");
             }
             printMenu();
