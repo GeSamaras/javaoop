@@ -37,7 +37,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'se.choccy.Main'
+    mainClass = 'se.adlez.Main'
 }
 
 tasks.named('test') {

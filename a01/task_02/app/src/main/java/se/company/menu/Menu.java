@@ -22,7 +22,7 @@ public class Menu {
         System.out.println("| 4) Print out work being done");
         System.out.println("| 5) Add super employee to team");
         System.out.println("| 6) Add three super employee, with powers, to team");
-        System.out.println("| 7) Salary report");
+        System.out.println("| 7) Salary report(not implemented)");
         System.out.println("| m) Print menu");
         System.out.println("| q) Quit");
         System.out.println("-----------------");
@@ -43,6 +43,7 @@ public class Menu {
                 case "4" -> System.out.println(team.work());
                 case "5" -> addSuperEmployee();
                 case "6" -> addThreeSuperEmployees();
+                case "m" -> printMenu();
                 default -> System.out.println("Invalid choice. Try again.");
             }
             printMenu();
@@ -64,7 +65,7 @@ public class Menu {
     private void addPredefinedEmployees() {
         team.addMember(new NormalEmployee("John Doe", "IT", 30000));
         team.addMember(new NormalEmployee("Jane Doe", "Economic", 30000));
-        team.addMember(new NormalEmployee("Little Jr", "Trainee", 1000));
+        team.addMember(new NormalEmployee("Little Jr", "Trainee", 10));
         System.out.println(team);
     }
 
@@ -81,11 +82,14 @@ public class Menu {
 
     private void addThreeSuperEmployees() {
         List<SuperPower> powers1 = List.of(new SuperPower("Flight", "Fly at supersonic speeds"),
-                                           new SuperPower("Strength", "Really strong to lift a house"));
+            new SuperPower("Strength", "Really strong to lift a house"));
         List<SuperPower> powers2 = List.of(new SuperPower("Invisibility", "Become invisible to the naked eye"),
-                                           new SuperPower("Strength", "Really strong to lift a house"));
+            new SuperPower("Strength", "Really strong to lift a house"));
+        List<SuperPower> powers3 = List.of(new SuperPower("Strength", "He angry"),
+            new SuperPower("Mega Strength", "Really strong, able to lift a planet"));
         team.addMember(new SuperEmployee("Clark Kent", "IT", powers1));
         team.addMember(new SuperEmployee("Jessica Jones", "Investigations", powers2));
+        team.addMember(new SuperEmployee("Hulk", "Youtuber", powers3));
         System.out.println(team);
     }
 }
