@@ -1,0 +1,49 @@
+## How was it to work after a defined class diagram like this, is it helpful or is it hard to follow the thoughts of the designer?
+It is helpful up to a point, but diagrams made by someone else add a new layer of abstraction, where i gotta think like the designer did.
+And for the most part a well designed diagram is what a developer wants
+to follow anyway, but it is overcomplicated to see so much in one go.
+
+
+
+## Elaborate on the difference between inheritance, composition, interface and abstract classes.
+Interfaces are similar to small lego blocks, every class using that
+interface has to use those blocks as foundation to build on top of.
+Inheritance is used when many classes share things in common, these
+classes would have one parent class which they get common functionalities
+and methods from.
+Abstract classes are like interfaces, they provide methods for other classes
+to implement as needed.
+Composition is a way to achieve inheritance, but in more flexible manner.
+Using composition allows classes to just be "part" of the inheritance,
+instead of "being" it. Classes "have" a composition, instead of "are" an
+inheritance.
+
+
+## Do you think the class diagram is balanced for this application, or would you like to propose any modifications to the class diagram?
+I think it is balanced, even if a bit too granular, but once everything comes together
+it all makes sense.
+
+
+## Are you satisied with your code or do you see improvement areas for it?
+I'm relieved with my code, it feels very verbose but that's how Java is.
+Some of the structure is all over the place, reading it from top to bottom can be
+quite daunting, and the logic in the hunter's movement needs some balancing.
+
+## What was the hardest part(s) to understand while building this application?
+Getting Gson's dependency was a nightmare, gradle just didn't recognize it for some
+reason and the solution was building everything again. And there were so many layers
+of abstraction, inheritance and so on that it was hard to keep up. The word position
+being thrown around 1 billion times felt mind-numbing.
+
+
+
+## Did you do the optional part, if so, describe how it works and elaborate on how you solved it.
+I've made a smarter Wolf AI, it moves according to the player's position in order to
+close the gap. After each player move it checks if it's horizontal and vertical position
+is greater or smaller than the wolf's current position, and then moves right or left, and
+down or up once each.
+
+
+## What is your TIL?
+Got much more comfortable visualizing how objects and classes interact, mentally and
+in code. And feel more capable coding in general, engineering logic and functionalities.

@@ -23,8 +23,6 @@ cd task_02
 
 ## Task 03 - Interface and abstract
 
-This is a gradle project, compile and execute like this.
-
 ```
 cd task_03
 ./gradlew run --console plain -q

@@ -1,0 +1,206 @@
+Part 1: Theory, terminology (20 points)
+This part relates to general terminology and theory on the object oriented programming paradigm and the Java programming language.
+
+What is a “class”? Explain with your own words in 2-3 sentences AND write a code sample to illustrate. (2p)
+A class is an object in which private, and public methods and functionalities pertaining to it are coded in. That class can
+then be called, and their methods can thus be used somewhere else in the codebase.
+Example: 
+public class Animal {
+	public String makeNoise() {
+		return "bark";
+	}	
+}
+
+
+
+
+
+What is an “object” and how do you instantiate it? Explain with your own words in 2-3 sentences AND write a code sample to illustrate. (2p)
+Objects are instances of classes that uses the class' methods and attributes. Those objects can be constructed
+in another file using the "new" synthax, which then starts a new instance of that class.
+public class Main() {
+	Animal dog = new Animal();
+}
+
+
+
+
+
+
+
+
+Part 2: OO modeling (UML) (20 points)
+This part relates to object-oriented modeling and drawing UML diagrams and translating UML diagrams to code.
+
+Show UML diagram, write code from it. (10p)
+
+
+
+
+
+Draw an UML diagram from the following text. (10p)
+
+An airplane is assigned to several flights. A flight is assigned to only one airplane. A pilot can perform several flights. A flight is performed by several (normally at least two) pilots.
+
+
+
+
+
+Part 3: Read & understand OO code (20 points)
+This part focuses on reading and understanding programming code in the Java programming language.
+
+
+Explain A) in 2-3 sentence what the program does and B) show what the output from it is when it's executed. (2p)
+
+
+
+
+
+
+
+
+Part 4: Write OO code (20 points)
+This part focuses on writing code in Java. If you are uncertain on the specifics of writing the code, then write pseudo code and add line comments on what you are trying to achieve.
+
+
+
+Implement the Dice class and the Main class and write a program that rolls a dice and prints the roll to the terminal. (5p)
+
+
+
+
+
+
+Part 5: Advanced OO concepts (20 points)
+This part is about more advanced concepts in object orientation and Java.
+
+Explain the concept of “dependency injection”. Write text (4-6 sentences) explaining the basics and add example code to illustrate how it works. (5p)
+
+
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+2024 OOP Java Exam
+1. Best description of the motivation behind using OOP
+OOP is a paradigm aimed for reusablity and code inheritance, it provides ways
+of adapting pre-determined code instructions to the needs of specific instances.
+Classes and objects are small pieces of code that promote flexibility and rela-
+tionships between different classes and objects
+
+2. Difference between overloading and overriding.
+Overrding points at the same method that classes/objects have. A child class
+may inherit the same method of it's parent class, but re-implement it to it's
+needs, and if that child class' method gets called, it overrides the parent's
+method.
+Overloading means the same class will have the same method with different
+implementations.
+
+3. Distinction between concrete and abstract classes.
+Abstract classes can opt to use both concrete and abstract methods, whereas
+abstract methods do not provide code instruction, they simply pass a request
+to be implemented by other classes extending it. Concrete classes work as
+regular normal classes.
+
+4. Best description of polymorphism in OOP
+Polymorphism makes so the same method or object will change according to the
+current object its being instanced in.
+
+5. What is not a benefit of using encapsulation in OOP?
+It makes the compiling and runtime much slower, it primarily helps with
+modularity and data security.
+
+6. 2 reasons why a developer would implement threads in a Java program.
+To be able to process more than a single task at a time.
+To improve performance and possibly reduce errors.
+
+7. In java concurrency, how do "BlockingQueues" help in secure communication
+between threads?
+BlockingQueues handle thread-safe data exchange, automatically managing 
+synchronization and waiting if the queue is full or empty.
+
+8. In OOP and UML, what best describes the difference between composition and
+aggregation?
+Composition is a "strong" relationship with subclasses, where the subclass
+cannot exist withou its parent class (An Engine cannot exist without a Car)
+Aggregation is a "weak" relationship, where parts can exist independantly.
+
+9. What best describes the primary purpose of packages in Java?
+Packages combine code so that other classes and interfaces may use them, making
+it more flexible.
+
+10. Describe ``` Account a = new Account("123456-7"); ```
+"a" is a variable which will store a new instance of the "Account" class, that
+is in turn passing the "123456-7" parameter.
+
+11. What best describes the primary objective in object-oriented analysis and
+design in software dev?
+OOAD aims to design apps with scalability and maintainable software.
+
+12. Best description of the behavior of private, public, protected and default
+access modifiers in Java when applied to fields and methods.
+Private: exclusive to the class
+Public: accesisble anywhere
+Protected: accessible in the same package and subclasses
+Default: accesisble only within the same package
+
+13. Best description of "tell, don't ask" in object-oriented design.
+Telling objects of what to do with one another, as opposed to checking states,
+waiting for responses and making decisions for them.
+
+14. 
+" Drawing a red circle "
+" Drawing a square "
+" Drawing a blue square "
+" Drawing a circle "
+
+15. What is the relationship between source files, class files, and the "java"
+and "javac" commands in Java?
+"java" will execute java class files compiled by the "javac" from their bytecode.
+
+16. What is the definition of "NullPointerException" in Java?
+
+17. Explain what Java records are.
+
+18. Explain the difference between Arrays and ArrayLists in Java.
+
+19. Complete the following code snippet so that it reads from a file named
+"data.txt" and prints its content line by line, while also handling any file-
+related exceptions.
+"new BUfferedReader(new FileReader(path))" "IOException"
+
+20. Explain how exceptions work in Java.
+Exceptions are ways to handle unforseen errors that may arise during the program's 
+execution, providing feedback to the developer and user, and crashing the program
+in a safe manner.
+
+21.Create a solution based on the following:
+
+Consider a Library Management System where a Library consists of multiple Books.
+Each Book has information about its Author, title, and publication year. Users
+can act as Borrowers and borrow a Book from the Library.
+
+#1 Each Book knows its title, publication year, and the author.
+#2 Each Author class should hold information about the author's name.
+#3 The Library needs to keep track of all its books.
+#4 A Borrower has a name and can borrow multiple books, but each book can be
+borrowed by only one Borrower at a time.
+#5 Users can find a book in the library by its title.
+#6 Users can borrow a book from the library, and when a book is borrowed, the
+library should keep track of which brorrower has borrower which book and on 
+which date.
+#7 When a book is borrowed, the current date needs to be recorded alongside
+the Borrower information in the Book.
+
+	1. Draw a UML diagram illustrating the classes, their associations, and
+	multiplicity.
+	2. Design the properties and methods needed for each class.
+	3. Provide a Java skeleton for the classes and implement the method
+	to find a book by its title.
+
+
+
+
+
