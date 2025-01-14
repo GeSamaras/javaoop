@@ -74,8 +74,75 @@ Implement the Dice class and the Main class and write a program that rolls a dic
 Part 5: Advanced OO concepts (20 points)
 This part is about more advanced concepts in object orientation and Java.
 
-Explain the concept of “dependency injection”. Write text (4-6 sentences) explaining the basics and add example code to illustrate how it works. (5p)
+1.Explain the concept of “dependency injection”. Write text (4-6 sentences) explaining the basics and add example code to illustrate how it works. (5p)
 
+2. The difference between "inheritance" and "composition"
+Inheritance provides methods and fields which their child classes will get
+from. It is used as a "is-a" relationship, making it more tightly coupled with
+their parent class. Composition alludes to similar methods that different
+classes may inherit and implement as needed, providing a more flexible code
+design.
+
+3. Interface explanation
+Interfaces serve as contracts where implementing classes must abide by. They
+are utilized as frameworks for similar classes to be more easily constructed, 
+passing fields without abstraction or implementation so that those classes
+can be coded as necessary.
+
+4. Difference with "abstraction" and "encapsulation"
+Abstraction is a way of hiding away fields and methods, in a way that objects
+may not have access to certain components, but are able to use it. 
+Encapsulation nests all data and methods into a single unit, restricting
+access to components using access modifiers.
+
+5. Polymorphism
+Polymorphism is a Java design where objects will change functionalities at
+compile-time. The same object will therefore have multiple instances and
+definitions according to each class inheriting it, with overriding or
+overloading.
+
+6. Constructors vs methods
+Constructors initialize objects, often with the same name as the class they're
+in, without return types or variable definitions. Methods perform actions,
+and they in turn can have return types, perform operations and be explicitly
+called on existing objects.
+
+7. Interfaces vs abstract classes
+Interfaces are similar to contracts, whereas classes implementing that inter-
+face must provide implementations to the interface's fields and methods.
+Abstract classes function like regular classes, however they may pass abstract
+methods to extending classes, who will then need to serve their own code.
+Interfaces make multiple inheritances possible, allowing classes to implement
+multiple behaviors.
+
+8. Overloading and Overriding
+Overloading refers to classes having constructors of the same name in the same
+class. Overriding is when inheriting classes have different implementation to
+the same method from their parent class.
+
+9. Purpose of access modifiers
+Access modifiers dictate who and where certain fields and methods can be viewed
+or accessed. Private modifiers make sure that these fields can only be accessed
+within the same class. Public means methods can be viewed from everywhere. 
+Protected permits access withtin the same package and subclass.
+
+10. How OOP facilitates code reuse and maintainability
+Classes and objects may inherit and share functionality between each other,
+reusing or reimplementing code determined in different classes to fit the
+object's needs. OOP avoids redundancy in code, making it so similar classes
+may inherit multiple methods from one common class or interface.
+
+11. Difference between static and instance members in class.
+Instance objects need to be constructed and called whenever they're needed,
+on the opposite, static members are always available and part of the class,
+being shared across all instances.
+
+12. Code analysis.
+The main function creates a new Dog object named Rex, which inherits from
+the Animal class. Dog implements it's own makeSound() method that is used
+to print "Rex barks" in the terminal.
+
+13.
 
 
 
