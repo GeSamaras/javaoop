@@ -1,92 +1,105 @@
-import java.time.format.DateTimeFormatter;
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 class Author {
-    private String name;
+    String name;
+
+    // class constructor, which initializes the Author's name
+    // whenever the Author object is called
     public Author(String name) {
         this.name = name;
     }
-    public String getName() {
+
+    // getter for when the name is needed somewhere in an object
+    public String getAuthor() {
         return name;
     }
 }
 
 class Book {
-    private String title;
-    private int year;
-    private DateTimeFormatter date;
-    private String borrowerName;
-    private Author author;
+    // all variables
+    String title;
+    int year;
 
-    public Book(String title, int year, Author author) {
+    // new instances of objects to be used in Book
+    Author author;
+    Borrower currentBorrower;
+    Date borrowDate;
+
+
+    // constructor that points title, year and author to this class
+    public Book (String title, int year, Author author) {
         this.title = title;
         this.year = year;
         this.author = author;
     }
-    public void loanBook(Borrower borrower) {
-        
-    }
-    public void returnBook() {
 
+    // getters for title and author in case those need to be called
+    public String getTitle(String title) {
+        return this.title;
     }
-    public String getTitle() {
-        return title;
+
+    public String getAuthor(String author) {
+        return author;
+    }
+
+    
+    // instanciates Borrower and Date in the parameter of this method
+    // if the object Borrower doesn't exist, then it becomes the new
+    // borrower, and the date is added
+    public void borrowBook(Borrower borrower, Date date) {
+        if (this.currentBorrower == null) {
+            this.currentBorrower = borrower;
+            this.borrowDate = date;
+        } else { System.out.println("already borrowed");}
     }
 }
 
 class Borrower {
-    private String name;
-    private ArrayList<Book> books;
-    public Borrower (String name) {
+    String name;
+    // starts a new List which takes Books borrowed by this user
+    List<Book> borrowedBooks;
+ 
+
+    // constructor
+    public Borrower(String name) {
         this.name = name;
-        books = new ArrayList<>();
+        this.borrowedBooks = new ArrayList<>();
     }
-    public void addBook(Book book){
 
+    public String getName() {
+        return name;
     }
-    public void removeBook(Book book){
 
+    public void borrowedBooks(Book books, Date date) {
+        if (borrowedBooks.contains(books)) {
+            System.out.println("Already in list");
+        } else {
+            books.borrowBook(this, date);
+            borrowedBooks.add(books);
+        }
     }
 }
 
+
 class Library {
-    ArrayList<Book> books = new ArrayList<>();
-    ArrayList<Borrower> borrowers = new ArrayList<>();
+    List<Book> books;
+
+    public Library() {
+        this.books = new ArrayList<>();    
+    }
+
+    public void addBook(Book book) {
+        books.add(book);
+    }
+
     public Book findBook(String title) {
-        for (Book book: books) {
-            if (book.getTitle().equals(title)) {
+        for(Book book: books) {
+            if (book.getTitle(title).equalsIgnoreCase(title)) {
                 return book;
             }
         }
         return null;
     }
-    public void borrowBook(Book books){
-
-    }
-}
-
-abstract class Vehicle {
-    private String name;
-    private int speed;
-    abstract public void move();
-}
-
-class Car extends Vehicle implements Repairable {
-    private String fuelType;
-
-    public void refuel() {
-
-    }
-
-    public void move() {
-
-    }
-
-    public void repair() {
-        System.out.println("car repaired");
-    }
-}
-
-interface Repairable {
-    public void repair();
 }

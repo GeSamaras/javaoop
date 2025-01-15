@@ -1,4 +1,4 @@
-package se.adlez;
+package se.adlez    ;
 
 import java.io.Console;
 import java.nio.charset.StandardCharsets;
@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 public class Main {
     public static void main(String[] args) {
         // Set the console encoding to UTF-8
+        // lol this doesn't matter, change language server in system locale
         System.setProperty("file.encoding", StandardCharsets.UTF_8.name());
         Console console = System.console();
         if (console != null) {

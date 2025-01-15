@@ -269,5 +269,84 @@ the Borrower information in the Book.
 
 
 
+Method Overloading is usually the class' constructor, it shares the same
+name as it's class and initializes objects. Overriding is when child classes
+provide different implementation to it's parents' methods.
+
+Polymorphism is the ability of methods to change their functions depending
+on which object calls them at runtime.
+
+Encapsulation bundles data and methods from an object, obscuring unnecessary
+information away from other classes and objects.
+
+Composition and aggregation differ, in that composition makes its subclasses
+dependant on the existence of its parent class. In aggregation, classes have
+a weak linked relationship, either can exist without each other.
 
 
+class Author {
+	String author
+	
+	-start the constructor for Author
+		points name to "this" name
+
+	-build a "get"-er for Author
+		it should return the name
+}
+
+class Book {
+	String with the title
+	int with the year
+	String with the author from Author
+
+	-start constructor, takes title, year and author
+		this title, this year and this author
+
+	-getter for the title
+		should return the title
+	
+	-getter for the author
+		return the author
+
+	borrowBook method, takes Borrower and Date as it's parameter
+		if the current borrower doesn't exist
+			this borrower becomes the current borrower
+			this date becomes the borrowDate
+		else the book has already been borrowed
+	
+}
+
+class Borrower {
+	String with the borrower's name
+	a List of borrowedBooks that uses Book
+
+
+	-constructor for Borrower
+		this name and borrowed book are for this class
+
+	-getter for the borrower's name
+		it returns the name
+
+	method for borrowBook (takes the Book, and the Date)
+		if the book is already contained in the borrowedBooks List 
+			it should show an error message
+		else add that book into the borrowedBooks list
+			call the method borrowBook from book, passing the title and date
+			add the "book" to the borrowedBooks list.
+}
+
+
+
+class Library {
+	constructor should start a new ArrayList
+		these books create a new ArrayList 	
+	
+	makes an array list with all the books from Book
+		get title, int and author from Book
+
+	find book by title method (passing the title)
+		for loops through the instance Book book
+			if the book title, equals to the title
+				return book
+		returns null otherwise
+}
